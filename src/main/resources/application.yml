@@ -1,0 +1,28 @@
+
+debug: true
+
+spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
+  mvc:
+    view:
+      prefix: /WEB-INF/views/ #重定向jsp文件
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/student?characterEncoding=UTF-8
+    username: root
+    password: 012138
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update #新增数据库链接必备的参数
+
+server:
+  port: 8080
+
+student:
+  name: zhangjing
+  age: 23
